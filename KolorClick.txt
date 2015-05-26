@@ -1,0 +1,17 @@
+﻿//Open your developer tools ... paste ... enjoy it.
+//打開你的開發者工具...貼上...然後享受它.
+//Score is not the point, just fun.
+//分數不是重點，只是好玩。
+
+function KolorClick(){
+	var _kolor = document.getElementById("kolor-kolor");
+	var _kolor_color = _kolor.style["background-color"];
+
+	var _kolor_options = document.querySelectorAll("#kolor-options > li > a");
+	for(var option in _kolor_options){
+		if(!!_kolor_options[option].style && _kolor_color  === _kolor_options[option].style["background-color"]){
+			_kolor_options[option].click();
+		}
+	};
+}
+setInterval(function(){ KolorClick(); }, 49);
